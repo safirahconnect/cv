@@ -1,0 +1,29 @@
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+}
+
+.footer p {
+  color: #9ea86b;
+  font-style: italic;
+}
+
+.footer a {
+  color: #12130c;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    background: #fff;
+  }
+  .footer p {
+    font-size: 0.875rem;
+  }
+}

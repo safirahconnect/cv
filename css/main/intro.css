@@ -1,0 +1,119 @@
+.intro {
+  min-height: 100vh;
+  display: flex;
+  background: #fff;
+}
+
+.intro-info {
+  flex: 1;
+  align-self: center;
+  padding-inline: 2em;
+}
+
+.intro-info p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b0bb77;
+  text-transform: uppercase;
+}
+
+.intro-info h1 {
+  font-size: 6rem;
+  line-height: 1.1;
+  color: #12130c;
+  margin-bottom: 0.5em;
+}
+
+.intro-pic {
+  flex: 1;
+  background-image: url("../../img/me.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro-botoes {
+  display: flex;
+  gap: 8px;
+}
+
+.intro-botoes a {
+  text-transform: uppercase;
+  padding: 1em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.intro-botoes a::after {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 9px;
+  background: url("../../img/arrow.svg") no-repeat;
+  transition: transform 0.5s;
+}
+
+.intro-botoes a:hover::after {
+  transform: translateX(4px);
+}
+
+.intro-botoes a:first-child {
+  background: #b0bb77;
+  color: #12130c;
+}
+
+.intro-botoes a:last-child {
+  background: #dedede;
+  color: #12130c;
+}
+
+.intro-botoes a:first-child:hover {
+  background: #9ea86b;
+}
+
+.intro-botoes a:last-child:hover {
+  background: #b3b3b3;
+}
+
+@media (max-width: 1000px) {
+  .intro-info h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    flex-direction: column;
+  }
+
+  .intro-info {
+    display: grid;
+    align-content: center;
+    padding-inline: 0.5em;
+  }
+
+  .intro-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-info p,
+  .intro-botoes a {
+    font-size: 0.875rem;
+  }
+
+  .intro-pic {
+    flex: 3;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro-info h1 {
+    font-size: 2rem;
+  }
+  .intro-botoes a,
+  .intro-info p {
+    font-size: 0.75rem;
+  }
+}
